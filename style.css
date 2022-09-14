@@ -104,7 +104,7 @@
   padding: 20px;
   font-family: "Creepster", cursive;
   color: var(--dracula-green);
-  background-color: var(--dracula-dark-black);
+  background-color: var(--dracula-black);
   min-width: var(--width-lg);
   border-radius: 20px;
   text-align: center;

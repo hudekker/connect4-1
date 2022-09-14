@@ -5,17 +5,21 @@ let circles = [...document.querySelectorAll(".circle")];
 let boolGreen = true;
 let btnStartOver = document.querySelector("#start-over");
 let msg = document.querySelector("#msg");
+let boolWin = false;
 
 msg.classList.remove("hidden");
 msg.innerText = boolGreen ? MSG1 : MSG2;
 boolGreen ? msg.classList.remove("p2") : msg.classList.add("p2");
 
+// Process inputs
 circles.forEach((el) => {
   let num = +el.id.slice(1);
   // el.innerText = num;
 
   if (num >= 35) {
     el.addEventListener("click", (e) => {
+      if (boolWin) return null;
+
       let col = getRowCol(num).col;
       let colArray = getColArray(col);
       let boolEntered = false;
@@ -32,8 +36,8 @@ circles.forEach((el) => {
         }
       }
 
-      let win = checkResult(boolGreen, circles, ROWS, COLS);
-      if (win) {
+      boolWin = checkResult(boolGreen, circles, ROWS, COLS);
+      if (boolWin) {
         msg.classList.add("hidden");
         msg.classList.remove("p2");
         btnStartOver.classList.remove("hidden");
@@ -60,7 +64,9 @@ const getColArray = (col) => {
   return arr.reverse();
 };
 
+// Start Over, Play Again
 btnStartOver.addEventListener("click", (evt) => {
+  boolWin = false;
   btnStartOver.classList.add("hidden");
   document.querySelector("#msg").classList.remove("hidden");
   document.querySelector("#msg").innerText = MSG1;

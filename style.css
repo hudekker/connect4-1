@@ -96,27 +96,26 @@
 }
 
 .hidden {
-  visibility: hidden;
+  display: none;
 }
 
 .message {
   margin-top: 40px;
-  /* font-family: "Bangers", cursive; */
+  padding: 20px;
   font-family: "Creepster", cursive;
   color: var(--dracula-black);
   background-color: var(--dracula-light-blue);
-  padding: 20px;
   min-width: var(--width-lg);
-  border-radius: 10px;
+  border-radius: 20px;
   text-align: center;
 }
 
 .start-over {
-  margin: 10px;
+  margin-top: 40px;
   padding: 20px;
   border-radius: 20px;
-  min-width: var(--width-lg);
-  background-color: var(--dracula-yellow);
+  /* min-width: var(--width-lg); */
+  background-color: var(--dracula-pink);
   color: var(--dracula-black);
   font-family: "Creepster", cursive;
   font-size: 1.5em;
@@ -129,8 +128,8 @@
   }
 
   .message {
-    max-width: var(--width-sm);
-    min-width: 0px;
+    /* max-width: var(--width-sm);
+    min-width: 0px; */
     font-size: 1em;
   }
 

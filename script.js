@@ -33,8 +33,9 @@ circles.forEach((el) => {
 
       let win = checkResult(boolGreen, circles, ROWS, COLS);
       if (win) {
+        document.querySelector("#msg").classList.add("hidden");
         btnStartOver.classList.remove("hidden");
-        document.querySelector("#msg").innerText = boolGreen ? MSG3 : MSG4;
+        btnStartOver.innerText = boolGreen ? MSG3 : MSG4;
       } else {
         boolGreen = !boolGreen;
         document.querySelector("#msg").innerText = boolGreen ? MSG1 : MSG2;
@@ -58,6 +59,7 @@ const getColArray = (col) => {
 
 btnStartOver.addEventListener("click", (evt) => {
   btnStartOver.classList.add("hidden");
+  document.querySelector("#msg").classList.remove("hidden");
   document.querySelector("#msg").innerText = MSG1;
 
   circles.forEach((el) => {

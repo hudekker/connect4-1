@@ -4,14 +4,13 @@ const ROWS = 6;
 let circles = [...document.querySelectorAll(".circle")];
 let boolGreen = true;
 let btnStartOver = document.querySelector("#start-over");
-// window.location = "/";
 
 document.querySelector("#msg").classList.remove("hidden");
 document.querySelector("#msg").innerText = boolGreen ? MSG1 : MSG2;
 
 circles.forEach((el) => {
   let num = +el.id.slice(1);
-  el.innerText = num;
+  // el.innerText = num;
 
   if (num >= 35) {
     el.addEventListener("click", (e) => {

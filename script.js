@@ -4,9 +4,11 @@ const ROWS = 6;
 let circles = [...document.querySelectorAll(".circle")];
 let boolGreen = true;
 let btnStartOver = document.querySelector("#start-over");
+let msg = document.querySelector("#msg");
 
-document.querySelector("#msg").classList.remove("hidden");
-document.querySelector("#msg").innerText = boolGreen ? MSG1 : MSG2;
+msg.classList.remove("hidden");
+msg.innerText = boolGreen ? MSG1 : MSG2;
+boolGreen ? msg.classList.remove("p2") : msg.classList.add("p2");
 
 circles.forEach((el) => {
   let num = +el.id.slice(1);
@@ -32,12 +34,14 @@ circles.forEach((el) => {
 
       let win = checkResult(boolGreen, circles, ROWS, COLS);
       if (win) {
-        document.querySelector("#msg").classList.add("hidden");
+        msg.classList.add("hidden");
+        msg.classList.remove("p2");
         btnStartOver.classList.remove("hidden");
         btnStartOver.innerText = boolGreen ? MSG3 : MSG4;
       } else {
         boolGreen = !boolGreen;
-        document.querySelector("#msg").innerText = boolGreen ? MSG1 : MSG2;
+        msg.innerText = boolGreen ? MSG1 : MSG2;
+        boolGreen ? msg.classList.remove("p2") : msg.classList.add("p2");
       }
     });
   }

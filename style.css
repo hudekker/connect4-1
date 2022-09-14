@@ -103,11 +103,15 @@
   margin-top: 40px;
   padding: 20px;
   font-family: "Creepster", cursive;
-  color: var(--dracula-black);
-  background-color: var(--dracula-light-blue);
+  color: var(--dracula-green);
+  background-color: var(--dracula-dark-black);
   min-width: var(--width-lg);
   border-radius: 20px;
   text-align: center;
+}
+
+.message.p2 {
+  color: var(--dracula-red);
 }
 
 .start-over {

@@ -118,7 +118,7 @@
   margin-top: 40px;
   padding: 20px;
   border-radius: 20px;
-  border-color: var(--dracula-black)
+  border-color: var(--dracula-black);
   /* min-width: var(--width-lg); */
   background-color: var(--dracula-orange);
   color: var(--dracula-black);

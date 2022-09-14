@@ -139,7 +139,7 @@
   }
 
   .start-over {
-    min-width: var(--width-sm);
+    /* min-width: var(--width-sm); */
     font-size: 1em;
   }
 }
